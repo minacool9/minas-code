@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina Faried's Homepage</title>
+    <style>
+        .particle {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background: blue;
+            pointer-events: none;
+            animation: fade 1s forwards, colorChange 7s infinite linear;
+        }
+        @keyframes fade {
+            to {
+                opacity: 0;
+                transform: scale(0.5);
+            }
+        }
+    </style>
+</head>
+<body bgcolor="red">
+    <h1>This is Mina's Website</h1>
+    <!-- this is my first page -->
+    <h1>Hello and welcome to my homepage!!!</h1>
+    <br>
+    Welcome to my fun house
+    <br><br>
+    <a href="http://www.yahoo.com">Yahoo</a>
+    <br><br>
+    <img src="me.jpg" alt="Picture of Mina" width="200" height="200">
+    <br><br>
+    <marquee align="middle" behavior="scroll" scrolldelay="5000" scrollamount="800">
+        ✧ *:･ﾟ✧  ✧ *:･ﾟ✧
+        (｡♥‿♥｡)
+        ✧ *:･ﾟ✧  ✧ *:･ﾟ✧
+    </marquee>
+    <h2>Sports I Enjoy</h2>
+    <ol>
+        <li>Soccer</li>
+        <li>Basketball</li>
+        <li>Tennis</li>
+        <li>Swimming</li>
+        <li>Running</li>
+    </ol>
+    <table border="1">
+        <tr>
+            <td>Course ID</td>
+            <td>Course Name</td>
+            <td>Room</td>
+            <td>Day and Time</td>
+        </tr>
+        <tr>
+            <td>CS 430</td>
+            <td>Internet multi</td>
+            <td>K 427</td>
+            <td>Fri 11:30-2:20</td>
+        </tr>
+    </table>
+    <div id="container"></div>
+    <script>
+        let colorIndex = 0;
+        const colors = ['blue', 'purple', 'red', 'orange', 'yellow', 'green', 'cyan'];
+        document.addEventListener('mousemove', function(e) {
+            var container = document.getElementById('container');
+            var particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = e.clientX + 'px';
+            particle.style.top = e.clientY + 'px';
+            particle.style.backgroundColor = colors[colorIndex];
+            container.appendChild(particle);
+            colorIndex = (colorIndex + 1) % colors.length;
+
+            setTimeout(function() {
+                container.removeChild(particle);
+            }, 1000);
+        });
+    </script>
+</body>
+</html>
