@@ -24,7 +24,7 @@
 </head>
 <body bgcolor="red">
     <h1>This is Mina's Website</h1>
-  
+    <!-- this is my first page -->
     <h1>Hello and welcome to my homepage!!!</h1>
     <br>
     Welcome to my fun house
@@ -45,7 +45,7 @@
         <li>Tennis</li>
         <li>Swimming</li>
         <li>Running</li>
-    </ol>
+    </ul>
     <table border="1">
         <tr>
             <td>Course ID</td>
@@ -60,6 +60,37 @@
             <td>Fri 11:30-2:20</td>
         </tr>
     </table>
+
+    <!-- Added form -->
+    <form>
+        <label for="fname">First Name:</label><br>
+        <input type="text" id="fname" name="fname"><br>
+        <label for="iname">Last Name:</label><br>
+        <input type="text" id="iname" name="iname"><br>
+
+        <h1>Select your status:</h1>
+        <input type="radio" id="freshman" name="status" value="freshman">
+        <label for="freshman">Freshman</label><br>
+        <input type="radio" id="sophomore" name="status" value="sophomore">
+        <label for="sophomore">Sophomore</label><br>
+        <input type="radio" id="junior" name="status" value="junior">
+        <label for="junior">Junior</label><br>
+        <input type="radio" id="senior" name="status" value="senior">
+        <label for="senior">Senior</label><br>
+    </form>
+
+        <h1>Select Element Demo</h1>
+    <form action="/action_page.php">
+        <label for="status">What is your status:</label>
+        <select id="status" name="status">
+            <option value="freshman">Freshman</option>
+            <option value="sophomore">Sophomore</option>
+            <option value="junior">Junior</option>
+            <option value="senior">Senior</option>
+        </select>
+        <input type="submit">
+    </form>
+
     <div id="container"></div>
     <script>
         let colorIndex = 0;
